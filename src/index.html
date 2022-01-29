@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заголовок страницы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,10 +18,136 @@
     />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <div class="container">
+      <ul class="card-set">
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Original film</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">ORIGINAL FILM</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">ORIGINAL FILM</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">ORIGINAL FILM</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">ORIGINAL FILM</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="card" data-modal-open>
+            <div class="card-img">
+              <img class="card-poster" src="./images/Rectangle 18.jpeg" alt="" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">ORIGINAL FILM</h2>
+              <p class="card-text">Genres | 2020</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="backdrop is-hidden" data-modal>
+      <div
+        class="modal modal--transform"
+        data-modal
+        style="display: flex; padding-right: 30px; padding-left: 30px"
+      >
+        <button class="btn-close" type="button" data-modal-close>
+          <svg class="btn-close__icon" width="30" height="30">
+            <path d="M8 8L22 22" stroke="black" stroke-width="2" />
+            <path d="M8 22L22 8" stroke="black" stroke-width="2" />
+          </svg>
+        </button>
+        <div class="modal-poster">
+          <img src="./images/Rectangle 18.jpeg" width="396" alt="" class="preview" />
+        </div>
+        <div class="modal-content">
+          <h2 class="modal-title">A FISTFUL OF LEAD</h2>
+          <table class="modal-table">
+            <tbody>
+              <tr>
+                <td class="nomination">Vote/Votes</td>
+                <td class="data"><span class="raiting">7,3</span>/ 1260</td>
+              </tr>
+
+              <tr>
+                <td class="nomination">Popularity</td>
+                <td class="data">100.2</td>
+              </tr>
+
+              <tr>
+                <td class="nomination">Original Title</td>
+                <td class="data">A FISTFUL OF LEAD</td>
+              </tr>
+
+              <tr>
+                <td class="nomination">Genre</td>
+                <td class="data">Lorem</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="description-title">ABOUT</h3>
+          <p class="text-description">
+            Four of the West’s most infamous outlaws assemble to steal a huge stash of gold from the
+            most corrupt settlement of the gold rush towns. But not all goes to plan one is killed
+            and the other three escapes with bags of gold hide out in the abandoned gold mine where
+            they happen across another gang of three – who themselves were planning to hit the very
+            same bank! As tensions rise, things go from bad to worse as they realise the bags of
+            gold are filled with lead... they’ve been double crossed – but by who and how?
+          </p>
+          <button class="btn-watched" type="submit">ADD TO WATCHED</button>
+          <button class="btn-queue" type="submit">ADD TO QUEUE</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
